@@ -64,7 +64,7 @@ filelock,3.29.0,MIT,,,
 fonttools,4.63.0,,MIT,http://github.com/fonttools/fonttools,
 fsspec,2026.4.0,BSD-3-Clause,,,
 idna,3.18,BSD-3-Clause,,,
-Jinja2,3.1.6,,,,
+Jinja2,3.1.6,BSD-3-Clause,,https://github.com/pallets/jinja,
 kiwisolver,1.5.0,,"=========================
  The Kiwi licensing terms
 =========================
@@ -1459,7 +1459,7 @@ SOFTWARE.
 polars-runtime-32,1.42.1,,MIT,,
 psutil,7.2.2,,BSD-3-Clause,https://github.com/giampaolo/psutil,license_files\psutil-7.2.2\LICENSE
 pyinstaller,6.21.0,,GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones),,
-pyinstaller-hooks-contrib,2026.6,,,https://github.com/pyinstaller/pyinstaller-hooks-contrib,
+pyinstaller-hooks-contrib,2026.6,GPL-2.0-or-later AND Apache-2.0,,https://github.com/pyinstaller/pyinstaller-hooks-contrib,
 pyparsing,3.3.2,MIT,,,
 PySide6_Essentials,6.11.1,,LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only,,
 python-dateutil,2.9.0.post0,,Dual License,https://github.com/dateutil/dateutil,license_files\python-dateutil-2.9.0.post0\LICENSE

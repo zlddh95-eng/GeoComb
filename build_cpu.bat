@@ -12,7 +12,7 @@ set "RELEASEZIP=release\GeoComb_Windows_CPU.zip"
 set "LOG=%BUILDROOT%\build_cpu.log"
 
 echo ============================================================
-echo GeoComb Windows CPU build v1.8
+echo GeoComb Windows CPU platform build
 echo Project: %CD%
 echo ============================================================
 echo.

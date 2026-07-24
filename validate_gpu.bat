@@ -6,13 +6,13 @@ set "PY=.venv_gpu\Scripts\python.exe"
 set "OUT=%CD%\regression_output_gpu"
 
 echo ============================================================
-echo GeoComb NVIDIA GPU regression validation v1.9
+echo GeoComb NVIDIA GPU regression validation
 echo ============================================================
 echo.
 
 if not exist "%PY%" (
     echo ERROR: GPU environment not found.
-    echo Run install_gpu_v1_9.bat first.
+    echo Run install_gpu.bat first.
     pause
     exit /b 1
 )
@@ -23,6 +23,9 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+
+if not exist "regression_test\input\1.JPG" goto :missing_assets
+if not exist "regression_test\expected\cell_predictions_3stage.csv" goto :missing_assets
 
 if exist "%OUT%" rmdir /s /q "%OUT%"
 
@@ -49,3 +52,12 @@ echo   %OUT%
 echo ============================================================
 pause
 exit /b 0
+
+:missing_assets
+echo.
+echo OPTIONAL REGRESSION CHECK NOT RUN.
+echo The authorized local regression_test assets were not found.
+echo They are not redistributed in the public source repository.
+echo The GPU Python environment check passed successfully.
+pause
+exit /b 2

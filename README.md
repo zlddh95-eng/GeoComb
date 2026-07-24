@@ -67,7 +67,7 @@ scripts install separate CPU and CUDA environments.
 
 ```bat
 install_cpu.bat
-validate_cpu.bat
+.venv_cpu\Scripts\python.exe check_environment.py
 build_cpu.bat
 ```
 
@@ -75,9 +75,14 @@ or
 
 ```bat
 install_gpu.bat
-validate_gpu.bat
+.venv_gpu\Scripts\python.exe check_gpu_environment_v1_9.py
 build_gpu.bat
 ```
+
+The optional `validate_cpu.bat` and `validate_gpu.bat` maintainer checks
+require an authorized local `regression_test` asset directory. Those
+image-based regression assets are not redistributed in this source
+repository.
 
 ## Data and model availability
 

@@ -12,14 +12,14 @@ set "RELEASEZIP=release\GeoComb_Windows_GPU.zip"
 set "LOG=%BUILDROOT%\build_gpu.log"
 
 echo ============================================================
-echo GeoComb Windows NVIDIA GPU build v1.9
+echo GeoComb Windows NVIDIA GPU platform build
 echo Project: %CD%
 echo ============================================================
 echo.
 
 if not exist "%PY%" (
     echo ERROR: GPU environment not found.
-    echo Run install_gpu_v1_9.bat first.
+    echo Run install_gpu.bat first.
     exit /b 1
 )
 
