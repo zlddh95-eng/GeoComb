@@ -1,0 +1,3 @@
+method,matched_cells,classification_accuracy_on_matched,end_to_end_correctly_localized_and_classified,end_to_end_correct_rate_vs_reference
+GeoComb,32595,0.8546709618039576,27858,0.8417331399564902
+DeepBee,23968,0.5714702937249666,13697,0.413856659415035

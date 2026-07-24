@@ -1,0 +1,77 @@
+{
+  "package": "GeoComb_Windows_Developer_v1",
+  "status": "Build-ready source package; Windows executables not yet built",
+  "models": "Frozen final GeoComb weights",
+  "critical_assets": [
+    {
+      "path": "models/frame_roi_yolo26m_1024_best.pt",
+      "size_bytes": 54525169,
+      "sha256": "9c971bdfb0196fd658503d17ef1c2fa4ecdeab411315db333f71baaf18234b95"
+    },
+    {
+      "path": "models/stage1_best.pt",
+      "size_bytes": 20890582,
+      "sha256": "e32a3f0a49682c2dbad29843a1e8461777ddf5f17e742632b3334dc461194d2f"
+    },
+    {
+      "path": "models/stage2_best.pt",
+      "size_bytes": 20878102,
+      "sha256": "37ba4b1aa3194105d63bc1ebc09f485bc31d48bbc1eb56294b74450ddec3750f"
+    },
+    {
+      "path": "models/stage3_best.pt",
+      "size_bytes": 20877590,
+      "sha256": "cff2e28a9d2958c1ff01d05d157b13a79bd6ce0eeb73ae7ea4352f89f36196a2"
+    },
+    {
+      "path": "pipeline_scripts/detect_frame_crop_resize_puremagenta_from_raw_v1.py",
+      "size_bytes": 9611,
+      "sha256": "bcf328020125221cc9760df6fa10f6ef2afe0b5e638f6f3d170b73a4d90049e6"
+    },
+    {
+      "path": "pipeline_scripts/detect_hough_circles_lattice_auto_radius_on_warped_v1.py",
+      "size_bytes": 18205,
+      "sha256": "22c366c0a31957189f89fcf20a6d019eee1422e27c0de492cd9a2a263a12f033"
+    },
+    {
+      "path": "pipeline_scripts/filter_existing_hough_pitch_fixedR046_overlaparea30_step1_v1.py",
+      "size_bytes": 16703,
+      "sha256": "aebf90b81db9b866d41bf9410e95cb0da8f0363f66d5a876caba41bd817cbf14"
+    },
+    {
+      "path": "pipeline_scripts/alternating_regularize_localhex_from_gray_step1_v1.py",
+      "size_bytes": 35842,
+      "sha256": "04f0ff97a637b5ed5888f5d6adc4ee223b054d96d6e934758be908382042bdf1"
+    },
+    {
+      "path": "pipeline_scripts/filter_pure_magenta_cells_after_step2_v1.py",
+      "size_bytes": 10522,
+      "sha256": "1d9bf7220e4ed9f7506450f3a54245fd48963c10779ef4c05294381646576507"
+    },
+    {
+      "path": "pipeline_scripts/apply_3stage_current_detection_5000coords_v1.py",
+      "size_bytes": 22826,
+      "sha256": "292420099ca07c00440793051198c80697435b58222069f963b208b4bdad0747"
+    },
+    {
+      "path": "pipeline_scripts/draw_cell_overlay_outline_legend_corner_v2.py",
+      "size_bytes": 9649,
+      "sha256": "41377a5eab09b07294d653b6115f38891b85ea30e49631c43cd6fccf7a0062f3"
+    },
+    {
+      "path": "regression_test/input/1.JPG",
+      "size_bytes": 3092683,
+      "sha256": "1e251747b8187040f5407cf9cd8b0d1b18c759b4e67b19721c21cf8ba1828b20"
+    },
+    {
+      "path": "regression_test/expected/cell_predictions_3stage.csv",
+      "size_bytes": 2521059,
+      "sha256": "1c5f200d70dc4e44b219f4ae48a7b8bcb50ed7d753f62fa63a41805babf87a7f"
+    }
+  ],
+  "build_targets": [
+    "Windows CPU",
+    "Windows NVIDIA GPU"
+  ],
+  "project_storage": "SQLite .geocomb + synchronized XLSX/CSV/PNG exports"
+}

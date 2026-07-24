@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "maximum_pooled_relative_count_difference": 0.005,
+    "minimum_left_match_fraction": 0.98,
+    "minimum_right_match_fraction": 0.98,
+    "minimum_class_agreement": 0.995
+  },
+  "platforms": [
+    "Windows_CPU",
+    "Windows_GPU",
+    "Linux_CPU",
+    "Linux_CUDA"
+  ],
+  "measured_runs_per_platform": 3,
+  "integrity_checks_passed": true,
+  "all_within_platform_comparisons_passed": true,
+  "all_cross_platform_comparisons_passed": true,
+  "within_platform_comparisons": 12,
+  "cross_platform_comparisons": 18,
+  "overall_pass": true
+}

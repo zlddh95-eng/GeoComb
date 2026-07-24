@@ -1,0 +1,14 @@
+{
+  "evaluation": "ROI segmentation held-out test set",
+  "test_image_count": 159,
+  "metrics": {
+    "box_precision": 0.9993332617051894,
+    "box_recall": 0.9937106918238994,
+    "box_mAP50": 0.995,
+    "box_mAP50_95": 0.9785546445956669,
+    "mask_precision": 0.9993332617051894,
+    "mask_recall": 0.9937106918238994,
+    "mask_mAP50": 0.995,
+    "mask_mAP50_95": 0.9839679417045281
+  }
+}

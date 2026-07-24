@@ -1,0 +1,5 @@
+metric,published_value,published_percent,published_evaluation_unit,our_comparable_value,directly_comparable,note
+Cell detection rate (CDR),0.987,98.7,Mean across 10 manually checked full-frame images,0.9708106596230622,Partially,"The formula is TP/manual count, equivalent to recall. However, the paper used a different set of 10 images."
+Weighted F1 for cell classification,0.943,94.3,"53,914 pre-extracted test cell crops",0.8866609574774192,No; contextual only,Our value is calculated only among cells localized by the full-frame workflow on the 13-image released set.
+Cell classification accuracy,0.9431,94.31,"53,914 pre-extracted test cell crops",0.8908915687755581,No; contextual only,The paper's classifier received reference-aligned cell crops; our matched-cell accuracy follows automatic center detection.
+End-to-end correct localization and classification,,,Not reported,0.8652012242936281,Not available,The paper did not report an equivalent end-to-end metric.

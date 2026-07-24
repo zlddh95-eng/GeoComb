@@ -1,0 +1,33 @@
+GEOCOMB WINDOWS REGRESSION VALIDATION
+==============================================================================
+
+Device: cuda
+Counts: expected=3465, actual=3452, relative error=0.003752
+Reference pitch: 60.299271 px
+
+Strict 1.5-px reproducibility:
+  reference match fraction=0.556999
+  prediction match fraction=0.559096
+  class agreement=0.997409
+  PASS=False
+
+Functional cross-platform validation (0.20 x pitch = 30.150 px):
+  reference match fraction=0.981530
+  prediction match fraction=0.985226
+  class agreement=0.996472
+  PASS=True
+
+Threshold sensitivity:
+    1.500 px: matches=1930, ref=0.556999, pred=0.559096, class=0.997409, mean_d=0.3831889135374338
+    3.000 px: matches=2341, ref=0.675613, pred=0.678158, class=0.997864, mean_d=0.6993024677319551
+    6.000 px: matches=2807, ref=0.810101, pred=0.813152, class=0.997150, mean_d=1.2954609276643914
+    9.000 px: matches=3053, ref=0.881097, pred=0.884415, class=0.996725, mean_d=1.7799718077882263
+   12.000 px: matches=3191, ref=0.920924, pred=0.924392, class=0.996553, mean_d=2.149292423479396
+   12.060 px: matches=3194, ref=0.921789, pred=0.925261, class=0.996556, mean_d=2.158568252174766
+   18.000 px: matches=3306, ref=0.954113, pred=0.957706, class=0.996370, mean_d=2.5824895946206285
+   30.150 px: matches=3401, ref=0.981530, pred=0.985226, class=0.996472, mean_d=3.156374140225229
+
+Original Hough cells: expected=3164, actual=3158
+Gap-filled cells: expected=301, actual=294
+
+Strict failure alone does not mean that the application failed. Hough and floating-point operations may not be bitwise identical across Windows/Linux and CPU/CUDA.

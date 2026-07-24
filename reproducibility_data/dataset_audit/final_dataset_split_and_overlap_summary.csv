@@ -1,0 +1,7 @@
+analysis,split,n_images,audit_result
+ROI segmentation,train,746,Content-deduplicated image set
+ROI segmentation,validation,160,Content-deduplicated image set
+ROI segmentation,test,159,Content-deduplicated image set
+DeepBee official benchmark,test,13,No overlap with ROI dataset in the final hash audit
+FAIRHive benchmark,test,10,No overlap with ROI dataset in the final hash audit
+In-house benchmark,test,6,No overlap with ROI dataset in the final hash audit

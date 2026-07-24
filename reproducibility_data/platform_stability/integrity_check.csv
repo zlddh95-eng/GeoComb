@@ -1,0 +1,5 @@
+platform_label,input_manifest_matches_first,source_and_model_hashes_match_first
+Windows_CPU,True,True
+Windows_GPU,True,True
+Linux_CPU,True,True
+Linux_CUDA,True,True

@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv_cpu/
+.venv_gpu/
+venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+credentials*
+secrets*
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# PyInstaller and release products
+build/
+build_output/
+dist/
+release/
+*.exe
+*.msi
+*.zip
+*.rar
+*.7z
+
+# Local projects and analysis products
+_release_audit/
+project.geocomb
+*.geocomb
+GeoComb_results.xlsx
+GeoComb_results_pending_update.xlsx
+pipeline/
+outputs/
+output/
+logs/
+runs/
+benchmarks/
+benchmark_outputs/
+smoke_*/
+backup_*/
+
+# Raw or local datasets
+data/raw/
+datasets/
+input_images/
+private_data/
+restricted_data/
+
+# Temporary files
+*.tmp
+*.temp
+~$*

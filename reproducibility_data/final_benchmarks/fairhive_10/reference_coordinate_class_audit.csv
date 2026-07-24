@@ -1,0 +1,11 @@
+image_id,trusted_reference_coordinates,trusted_classes,rows_with_reference_coordinate,median_coordinate_distance_px,maximum_coordinate_distance_px,rows_over_tolerance
+img8628,3324,Capped_brood | Honey | Other | Pollen,6648,0.0,0.0,0
+img8629,3262,Capped_brood | Honey | Larvae | Other | Pollen,6524,0.0,0.0,0
+img8630,3381,Capped_brood | Honey | Larvae | Other | Pollen,6762,0.0,0.0,0
+img8631,3056,Capped_brood | Honey | Other | Pollen,6112,0.0,0.0,0
+img8632,3399,Capped_brood | Honey | Larvae | Nectar | Other | Pollen,6798,0.0,0.0,0
+img8633,3323,Capped_brood | Honey | Larvae | Nectar | Other | Pollen,6646,0.0,0.0,0
+img8634,3380,Capped_brood | Honey | Nectar | Other | Pollen,6760,0.0,0.0,0
+img8635,3307,Capped_brood | Honey | Larvae | Other | Pollen,6614,0.0,0.0,0
+img8636,3331,Capped_brood | Honey | Larvae | Other | Pollen,6662,0.0,0.0,0
+img8637,3333,Capped_brood | Honey | Nectar | Other | Pollen,6666,0.0,0.0,0

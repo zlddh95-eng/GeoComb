@@ -1,0 +1,226 @@
+{
+  "device": "cuda",
+  "reference_count": 3465,
+  "prediction_count": 3452,
+  "relative_count_error": 0.003751803751803752,
+  "reference_pitch_px": 60.29927112819495,
+  "strict_threshold_px": 1.5,
+  "functional_threshold_px": 30.149635564097476,
+  "functional_threshold_basis": "0.50 x image-specific cell pitch; identical to the manuscript localization criterion",
+  "strict_result": {
+    "threshold_px": 1.5,
+    "matched_count": 1930,
+    "reference_match_fraction": 0.556998556998557,
+    "prediction_match_fraction": 0.5590961761297798,
+    "class_agreement_among_matches": 0.9974093264248705,
+    "mean_matched_distance_px": 0.3831889135374338,
+    "median_matched_distance_px": 0.2333701499964885,
+    "p90_matched_distance_px": 0.9949375627044389,
+    "max_matched_distance_px": 1.4976399390942152
+  },
+  "functional_result": {
+    "threshold_px": 30.149635564097476,
+    "matched_count": 3401,
+    "reference_match_fraction": 0.9815295815295815,
+    "prediction_match_fraction": 0.985225955967555,
+    "class_agreement_among_matches": 0.9964716259923552,
+    "mean_matched_distance_px": 3.156374140225229,
+    "median_matched_distance_px": 0.9376175442170991,
+    "p90_matched_distance_px": 9.136145866639994,
+    "max_matched_distance_px": 29.888545947117514
+  },
+  "strict_reproducibility_passed": false,
+  "functional_cross_platform_passed": true,
+  "passed": true,
+  "threshold_sensitivity": [
+    {
+      "threshold_px": 1.5,
+      "matched_count": 1930,
+      "reference_match_fraction": 0.556998556998557,
+      "prediction_match_fraction": 0.5590961761297798,
+      "class_agreement_among_matches": 0.9974093264248705,
+      "mean_matched_distance_px": 0.3831889135374338,
+      "median_matched_distance_px": 0.2333701499964885,
+      "p90_matched_distance_px": 0.9949375627044389,
+      "max_matched_distance_px": 1.4976399390942152
+    },
+    {
+      "threshold_px": 3.0,
+      "matched_count": 2341,
+      "reference_match_fraction": 0.6756132756132757,
+      "prediction_match_fraction": 0.6781575898030128,
+      "class_agreement_among_matches": 0.9978641606151217,
+      "mean_matched_distance_px": 0.6993024677319551,
+      "median_matched_distance_px": 0.3407013103894192,
+      "p90_matched_distance_px": 2.0584475050594504,
+      "max_matched_distance_px": 2.9837993643074228
+    },
+    {
+      "threshold_px": 6.0,
+      "matched_count": 2807,
+      "reference_match_fraction": 0.8101010101010101,
+      "prediction_match_fraction": 0.8131517960602549,
+      "class_agreement_among_matches": 0.9971499821873887,
+      "mean_matched_distance_px": 1.2954609276643914,
+      "median_matched_distance_px": 0.5059392538820338,
+      "p90_matched_distance_px": 3.9441281323601975,
+      "max_matched_distance_px": 5.997218416048036
+    },
+    {
+      "threshold_px": 9.0,
+      "matched_count": 3053,
+      "reference_match_fraction": 0.881096681096681,
+      "prediction_match_fraction": 0.88441483198146,
+      "class_agreement_among_matches": 0.9967245332459875,
+      "mean_matched_distance_px": 1.7799718077882263,
+      "median_matched_distance_px": 0.6414343035583189,
+      "p90_matched_distance_px": 5.479511416106497,
+      "max_matched_distance_px": 8.979794658877022
+    },
+    {
+      "threshold_px": 12.0,
+      "matched_count": 3191,
+      "reference_match_fraction": 0.9209235209235209,
+      "prediction_match_fraction": 0.9243916570104287,
+      "class_agreement_among_matches": 0.996552804763397,
+      "mean_matched_distance_px": 2.149292423479396,
+      "median_matched_distance_px": 0.7444817053548729,
+      "p90_matched_distance_px": 6.567421588170584,
+      "max_matched_distance_px": 11.983466078052704
+    },
+    {
+      "threshold_px": 12.059854225638992,
+      "matched_count": 3194,
+      "reference_match_fraction": 0.9217893217893218,
+      "prediction_match_fraction": 0.925260718424102,
+      "class_agreement_among_matches": 0.9965560425798372,
+      "mean_matched_distance_px": 2.158568252174766,
+      "median_matched_distance_px": 0.7454462833278377,
+      "p90_matched_distance_px": 6.621117141707956,
+      "max_matched_distance_px": 12.05030918469714
+    },
+    {
+      "threshold_px": 18.0,
+      "matched_count": 3306,
+      "reference_match_fraction": 0.9541125541125541,
+      "prediction_match_fraction": 0.9577056778679026,
+      "class_agreement_among_matches": 0.9963702359346642,
+      "mean_matched_distance_px": 2.5824895946206285,
+      "median_matched_distance_px": 0.8455727959170123,
+      "p90_matched_distance_px": 7.745766641086931,
+      "max_matched_distance_px": 17.94568084970105
+    },
+    {
+      "threshold_px": 30.149635564097476,
+      "matched_count": 3401,
+      "reference_match_fraction": 0.9815295815295815,
+      "prediction_match_fraction": 0.985225955967555,
+      "class_agreement_among_matches": 0.9964716259923552,
+      "mean_matched_distance_px": 3.156374140225229,
+      "median_matched_distance_px": 0.9376175442170991,
+      "p90_matched_distance_px": 9.136145866639994,
+      "max_matched_distance_px": 29.888545947117514
+    }
+  ],
+  "nearest_neighbor_summary": {
+    "reference_to_prediction_px": {
+      "mean": 3.8309941631097306,
+      "median": 0.9873460195943278,
+      "p75": 4.320748372342674,
+      "p90": 10.242982940321655,
+      "p95": 17.021423970061743,
+      "p99": 36.453828615529865,
+      "max": 59.29779541187537
+    },
+    "prediction_to_reference_px": {
+      "mean": 3.6939383451091765,
+      "median": 0.9789727663983585,
+      "p75": 4.248365370981871,
+      "p90": 10.058009781330647,
+      "p95": 16.102865512259708,
+      "p99": 31.981312038063205,
+      "max": 59.41615055440545
+    }
+  },
+  "expected_original_hough_cells": 3164,
+  "actual_original_hough_cells": 3158,
+  "expected_gapfill_cells": 301,
+  "actual_gapfill_cells": 294,
+  "crop_metadata_comparison": {
+    "available": true,
+    "exact_crop_geometry_match": true,
+    "fields": {
+      "bbox_x1": {
+        "expected": 0,
+        "actual": 0,
+        "difference": 0.0
+      },
+      "bbox_y1": {
+        "expected": 0,
+        "actual": 0,
+        "difference": 0.0
+      },
+      "bbox_x2": {
+        "expected": 5211,
+        "actual": 5211,
+        "difference": 0.0
+      },
+      "bbox_y2": {
+        "expected": 2459,
+        "actual": 2459,
+        "difference": 0.0
+      },
+      "bbox_w": {
+        "expected": 5211,
+        "actual": 5211,
+        "difference": 0.0
+      },
+      "bbox_h": {
+        "expected": 2459,
+        "actual": 2459,
+        "difference": 0.0
+      },
+      "frame_mask_area_px": {
+        "expected": 12347381,
+        "actual": 12323190,
+        "difference": -24191.0
+      },
+      "outside_mask_fraction_in_bbox": {
+        "expected": 0.0364034256998033,
+        "actual": 0.0382913049779187,
+        "difference": 0.0018878792781154008
+      },
+      "scale_3000": {
+        "expected": 0.5757052389176741,
+        "actual": 0.5757052389176741,
+        "difference": 0.0
+      },
+      "out_w_3000": {
+        "expected": 3000,
+        "actual": 3000,
+        "difference": 0.0
+      },
+      "out_h_3000": {
+        "expected": 1416,
+        "actual": 1416,
+        "difference": 0.0
+      },
+      "scale_5000": {
+        "expected": 0.9595087315294568,
+        "actual": 0.9595087315294568,
+        "difference": 0.0
+      },
+      "out_w_5000": {
+        "expected": 5000,
+        "actual": 5000,
+        "difference": 0.0
+      },
+      "out_h_5000": {
+        "expected": 2359,
+        "actual": 2359,
+        "difference": 0.0
+      }
+    }
+  },
+  "interpretation": "PASS means the Windows result is functionally equivalent at 0.20 x cell pitch. The separate strict result measures near-bitwise coordinate reproduction within 1.5 px and may fail across operating systems, CPU/CUDA backends, and numerical library builds."
+}

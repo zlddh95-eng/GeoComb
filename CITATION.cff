@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use GeoComb, please cite the software and associated article."
+title: "GeoComb"
+type: software
+version: 1.0.0
+license: AGPL-3.0-only
+repository-code: "https://github.com/zlddh95-eng/GeoComb"
+authors:
+  - family-names: "Kim"
+    given-names: "Sanghyeon"
+  - family-names: "Park"
+    given-names: "Su Ryeo"
+  - family-names: "Pittendrigh"
+    given-names: "Barry R."
+  - family-names: "Jack"
+    given-names: "Cameron J."
+  - family-names: "Swale"
+    given-names: "Daniel R."
+preferred-citation:
+  type: article
+  title: "GeoComb: A reproducible hybrid machine vision workflow for cross-domain detection and classification of honey bee comb cells"
+  authors:
+    - family-names: "Kim"
+      given-names: "Sanghyeon"
+    - family-names: "Park"
+      given-names: "Su Ryeo"
+    - family-names: "Pittendrigh"
+      given-names: "Barry R."
+    - family-names: "Jack"
+      given-names: "Cameron J."
+    - family-names: "Swale"
+      given-names: "Daniel R."
+  journal: "Computers and Electronics in Agriculture"
+  year: 2026
+  notes: "Add the article DOI, volume, and article number after publication."

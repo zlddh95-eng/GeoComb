@@ -1,0 +1,28 @@
+{
+  "frame": {
+    "imgsz": 1024,
+    "conf": 0.25,
+    "margin_ratio": 0.02
+  },
+  "detection": {
+    "target_longs": [
+      3000,
+      5000
+    ],
+    "radius_min": 12,
+    "radius_max": 24,
+    "fixed_radius_ratio": 0.48,
+    "overlap_fraction": 0.33,
+    "max_magenta_fraction": 0.3
+  },
+  "classification": {
+    "coord_scale": 1.6666667,
+    "stage1_half_step": 0.8,
+    "stage1_imgsz": 320,
+    "stage2_half_step": 1.8,
+    "stage2_imgsz": 320,
+    "stage3_half_step": 0.45,
+    "stage3_imgsz": 384,
+    "batch_size": 64
+  }
+}

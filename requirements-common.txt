@@ -1,0 +1,10 @@
+ultralytics>=8.4.60,<9
+opencv-python>=4.10,<5
+numpy>=1.26,<3
+pandas>=2.2,<4
+scipy>=1.13,<2
+Pillow>=10,<13
+openpyxl>=3.1,<4
+PySide6-Essentials>=6.8,<7
+PyInstaller>=6.11,<7
+matplotlib>=3.8,<4

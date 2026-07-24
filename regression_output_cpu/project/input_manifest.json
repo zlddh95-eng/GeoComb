@@ -1,0 +1,9 @@
+[
+  {
+    "original_name": "1.JPG",
+    "source_path": "C:\\GeoComb\\regression_test\\input\\1.JPG",
+    "safe_name": "1.jpg",
+    "safe_stem": "1",
+    "copied_path": "C:\\GeoComb\\regression_output_cpu\\project\\input_images\\1.jpg"
+  }
+]

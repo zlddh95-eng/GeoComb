@@ -1,0 +1,2 @@
+method,n_images,n_reference,n_predicted,tp,fp,fn,precision,recall_cdr_micro,f1_micro,mean_per_image_cdr,median_per_image_cdr,mean_relative_total_count_error,median_relative_total_count_error
+GeoComb,13,39533,39804,38393,1411,1140,0.964551301376746,0.9711633318999316,0.9678460239232639,0.9708106596230622,0.970957095709571,0.019172270974017212,0.0061900340451872485

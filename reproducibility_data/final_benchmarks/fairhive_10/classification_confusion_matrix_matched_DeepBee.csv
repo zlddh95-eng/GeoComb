@@ -1,0 +1,8 @@
+reference_class,Egg,Larvae,Capped_brood,Pollen,Nectar,Honey,Other
+Egg,0,0,0,0,0,0,0
+Larvae,1,17,0,178,1,39,180
+Capped_brood,1,0,1252,13,1,4454,59
+Pollen,2,0,0,335,6,392,3015
+Nectar,0,0,0,0,6,0,11
+Honey,0,0,0,3,1,4503,89
+Other,36,8,0,1364,24,393,7584

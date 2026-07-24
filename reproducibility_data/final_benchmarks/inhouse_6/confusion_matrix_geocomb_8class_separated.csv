@@ -1,0 +1,9 @@
+Reference,Egg,Larvae,Capped_pupae,Pollen,Capped_honey,Uncapped_honey,Empty_cell,Unbuilt_cell
+Egg,286,2,0,1,3,2,37,0
+Larvae,4,578,0,41,0,4,11,0
+Capped_pupae,0,3,699,2,6,0,1,0
+Pollen,1,4,0,2193,12,33,17,0
+Capped_honey,1,0,5,22,5779,5,15,3
+Uncapped_honey,2,7,0,1,32,2018,66,1
+Empty_cell,64,75,6,24,31,116,4677,161
+Unbuilt_cell,0,1,0,0,4,0,54,2479

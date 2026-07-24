@@ -1,0 +1,5 @@
+contrast,metric,point_difference,paired_cluster_bootstrap_95ci_low,paired_cluster_bootstrap_95ci_high,bootstrap_probability_difference_gt_0,n_images,bootstrap_replicates,seed
+GeoComb minus DeepBee,precision,0.09639710802253432,0.056200414585504656,0.13702296032608605,1.0,30,100000,20260721
+GeoComb minus DeepBee,recall,0.4429624980386003,0.3000736049540654,0.5859109452325824,1.0,30,100000,20260721
+GeoComb minus DeepBee,f1,0.31361356205988034,0.21168931630005744,0.4368980054728324,1.0,30,100000,20260721
+GeoComb minus DeepBee,mean_image_count_error,-0.4661164288376891,-0.5986971114696087,-0.33310670064803366,0.0,30,100000,20260721

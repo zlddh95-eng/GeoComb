@@ -1,0 +1,7 @@
+path: /replace/with/roi_dataset_root
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: Frame

@@ -1,0 +1,17 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "project_root": "C:\\GeoComb",
+  "gpus": [
+    {
+      "index": "0",
+      "name": "NVIDIA GeForce RTX 5070 Ti",
+      "driver_version": "581.29",
+      "memory_total_mib": "16303",
+      "compute_capability": "12.0"
+    }
+  ],
+  "minimum_detected_driver_major": 581,
+  "minimum_required_driver_major_for_cuda_12_x": 525,
+  "free_disk_gib": 2857.539363861084,
+  "recommended_minimum_free_disk_gib": 20.0
+}
