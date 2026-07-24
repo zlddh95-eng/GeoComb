@@ -7,11 +7,10 @@ set "OUT=%CD%\regression_output_cpu"
 
 if not exist "%PY%" (
     echo ERROR: CPU environment not found.
+    echo Run install_cpu.bat first.
     pause
     exit /b 1
 )
-
-if exist "%OUT%" rmdir /s /q "%OUT%"
 
 "%PY%" check_environment.py
 if errorlevel 1 (
@@ -19,6 +18,11 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
+
+if not exist "regression_test\input\1.JPG" goto :missing_assets
+if not exist "regression_test\expected\cell_predictions_3stage.csv" goto :missing_assets
+
+if exist "%OUT%" rmdir /s /q "%OUT%"
 
 "%PY%" geocomb_cli.py validate ^
   --device cpu ^
@@ -40,3 +44,13 @@ echo Regression validation PASSED.
 echo Results were preserved in:
 echo   %OUT%
 pause
+exit /b 0
+
+:missing_assets
+echo.
+echo OPTIONAL REGRESSION CHECK NOT RUN.
+echo The authorized local regression_test assets were not found.
+echo They are not redistributed in the public source repository.
+echo The CPU Python environment check passed successfully.
+pause
+exit /b 2
