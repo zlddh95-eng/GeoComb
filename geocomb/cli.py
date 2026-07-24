@@ -61,7 +61,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     validate = subparsers.add_parser(
         "validate",
-        help="Run the included Linux-reference regression test.",
+        help=("Run the optional local regression test; "
+              "authorized regression_test assets are required."),
     )
     validate.add_argument(
         "--device",
