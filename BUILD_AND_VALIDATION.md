@@ -10,50 +10,56 @@ Use 64-bit Python 3.11.
 The manuscript-aligned Windows environments used Python 3.11.9. The CPU
 environment used PyTorch 2.13.0+cpu, and the CUDA environment used PyTorch
 2.11.0+cu128. Both used Ultralytics 8.4.96, OpenCV 4.13.0, and NumPy 2.4.4.
-Exact dependency snapshots from the release environments should accompany
-each tagged source release.
+Exact dependency snapshots from the release environments accompany the
+tagged source release in the `licenses` directory.
 
-## Source validation before building
+## Environment validation and building
 
 CPU:
 
 ```bat
 install_cpu.bat
-validate_cpu.bat
+.venv_cpu\Scripts\python.exe check_environment.py
+build_cpu.bat
 ```
 
 GPU:
 
 ```bat
 install_gpu.bat
-validate_gpu.bat
+.venv_gpu\Scripts\python.exe check_gpu_environment_v1_9.py
+build_gpu.bat
 ```
 
-The included `1.JPG` regression check is a pre-release smoke test. It
-analyzes one controlled example and compares the resulting cell coordinates
-and classes with a frozen expected output. It is not the manuscript-level
-platform benchmark.
+These commands validate the Python environment and build the application.
+They do not reproduce the manuscript benchmark.
 
-Smoke-test acceptance thresholds:
+## Optional maintainer regression check
+
+`validate_cpu.bat` and `validate_gpu.bat` run a controlled single-image
+regression check when an authorized local `regression_test` directory is
+available. The image-based regression assets are not redistributed in this
+source repository. Without those assets, the scripts stop with an explicit
+message rather than reporting a validation result.
+
+When the authorized assets are supplied, the check compares the resulting
+cell coordinates and classes with the frozen expected output. Its acceptance
+thresholds are:
 
 - total cell-count error <= 0.5%;
 - at least 99.5% of expected centers matched within 1.5 pixels; and
 - at least 99.5% class agreement among matched centers.
 
-Do not distribute a build that fails the smoke test until the cause has
-been reviewed.
+This single-image check is a release-maintainer smoke test, not the
+manuscript-level platform benchmark.
 
 ## Manuscript-level platform validation
 
 The final platform evaluation processed the same 29-image benchmark three
 times in each of four configurations: Windows CPU, Windows CUDA, Linux CPU,
 and Linux CUDA. All measured runs produced identical total and per-image
-cell counts and identical center coordinates. CPU-CUDA class-label
-agreement was 99.9924%.
-
-The single-image smoke test and the 29-image manuscript benchmark serve
-different purposes: the former checks a newly built package, whereas the
-latter provides the reported cross-platform evidence.
+cell counts and identical center coordinates. CPU-CUDA class-label agreement
+was 99.9924%.
 
 ## Deterministic processing controls
 
@@ -63,19 +69,7 @@ latter provides the reported cross-platform evidence.
 - OpenCV is restricted to one processing thread; and
 - OpenCL is disabled.
 
-## Executable build
-
-CPU:
-
-```bat
-build_cpu.bat
-```
-
-GPU:
-
-```bat
-build_gpu.bat
-```
+## Executable build outputs
 
 Expected archives:
 
@@ -92,9 +86,8 @@ release/GeoComb_Windows_GPU/GeoComb_GPU/GeoComb_GPU.exe
 ```
 
 The build uses PyInstaller one-folder format rather than one-file format
-because PyTorch, CUDA, Qt, and Ultralytics include large binary
-dependencies. Distribute the complete generated folder, not the executable
-alone.
+because PyTorch, CUDA, Qt, and Ultralytics include large binary dependencies.
+Distribute the complete generated folder, not the executable alone.
 
 ## GPU notes
 
@@ -106,8 +99,9 @@ users should use the CPU package.
 ## Release checklist
 
 - source tree corresponds to the intended release commit;
-- single-image regression validation passes;
-- model SHA-256 hashes match `ASSET_MANIFEST.json`;
+- environment checks pass in the CPU and GPU build environments;
+- the authorized local regression check passes before a binary release;
+- model and frozen-source SHA-256 hashes match `ASSET_MANIFEST.json`;
 - the 29-image evidence package remains traceable to the frozen release;
 - a fresh Windows computer can open the complete one-folder package;
 - project creation, editing, and Excel regeneration work;
