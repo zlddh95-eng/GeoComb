@@ -4,6 +4,14 @@
   "version": "1.0.0",
   "status": "Frozen manuscript-aligned source and model assets",
   "models": "Frozen final GeoComb weights",
+  "model_distribution": {
+    "public_channel": "Versioned GitHub release assets or corresponding DOI archive",
+    "license_route": "AGPL-3.0-only for Ultralytics-derived model artifacts",
+    "model_card": "MODEL_CARD.md",
+    "contains_raw_training_images": false,
+    "contains_extracted_training_crops": false,
+    "contains_cell_level_annotations": false
+  },
   "critical_assets": [
     {
       "path": "geocomb/pipeline.py",

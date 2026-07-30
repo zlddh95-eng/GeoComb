@@ -86,9 +86,15 @@ repository.
 
 ## Data and model availability
 
+The four frozen model weights are distributed as assets of the corresponding
+versioned release or DOI archive. Verify them against
+[ASSET_MANIFEST.json](ASSET_MANIFEST.json) and review their provenance,
+intended use, limitations, and licensing in [MODEL_CARD.md](MODEL_CARD.md).
+
 DeepBee and FAIRHiveFrames-1K raw images are not redistributed in this
-repository. Obtain them from their original sources and use the documented
-manifests to reconstruct the evaluated subsets. See
+repository or in the model release. Obtain them from their original sources.
+GeoComb also does not redistribute DeepBee-derived crops or corrected
+cell-level annotations. See
 [DATA_AND_MODEL_AVAILABILITY.md](DATA_AND_MODEL_AVAILABILITY.md).
 
 ## Citation
@@ -99,8 +105,11 @@ The article DOI and archived software DOI will be added after assignment.
 
 ## License
 
-GeoComb is distributed under the GNU Affero General Public License,
-version 3 (`AGPL-3.0-only`). See [LICENSE](LICENSE).
+GeoComb source and the distributed Ultralytics-derived model artifacts use
+the GNU Affero General Public License, version 3 (`AGPL-3.0-only`). See
+[LICENSE](LICENSE). No separate non-commercial restriction is added to the
+model weights; third-party datasets retain their own terms and are not
+relicensed by GeoComb.
 
 Third-party components remain subject to their own licenses. See
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -41,6 +41,25 @@ release\GeoComb_Windows_GPU.zip
 않습니다. 이 검사는 논문에 보고된 29개 이미지 플랫폼 벤치마크와는
 구분됩니다.
 
+## 모델과 데이터 배포
+
+동결된 모델 가중치 4개는 해당 버전의 GitHub Release 자산 또는 DOI
+아카이브로 배포합니다. 파일의 SHA-256은 `ASSET_MANIFEST.json`에서
+검증할 수 있으며, 학습 출처와 사용 범위 및 한계는 `MODEL_CARD.md`에
+기록합니다.
+
+분류기 학습에는 보고된 DeepBee 평가 이미지 13장과 겹치지 않는 별도의
+DeepBee 프레임 이미지 67장에서 유래한 수동 검토 crop과 label이
+포함되었습니다. GeoComb은 DeepBee 원본 이미지, 추출 crop, 수정
+annotation을 재배포하지 않습니다. FAIRHiveFrames-1K 원본 이미지도
+포함하지 않으며 사용자는 각 공식 출처에서 받아야 합니다.
+
+GeoComb 소스와 Ultralytics 기반 모델 산출물은 `AGPL-3.0-only` 경로로
+배포합니다. AGPL과 충돌할 수 있는 별도의 비상업적 제한은 가중치에
+추가하지 않습니다. 이는 DeepBee, FAIRHiveFrames-1K 또는 in-house
+원본 이미지의 조건을 변경하거나 해당 이미지에 대한 권리를 부여한다는
+뜻이 아닙니다.
+
 ## 분석 결과
 
 프로젝트 폴더에는 다음 결과가 생성됩니다.
