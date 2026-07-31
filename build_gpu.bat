@@ -40,6 +40,8 @@ for %%F in (
     "LICENSE"
     "MODEL_CARD.md"
     "ASSET_MANIFEST.json"
+    "README.md"
+    "README_KOREAN.md"
     "docs\USER_GUIDE.md"
     "docs\THIRD_PARTY_NOTICES.md"
     "docs\BUILD_AND_VALIDATION.md"
@@ -123,6 +125,8 @@ if %ROBOCOPY_CODE% GEQ 8 (
 )
 
 for %%F in (
+    "README.md"
+    "README_KOREAN.md"
     "docs\USER_GUIDE.md"
     "docs\THIRD_PARTY_NOTICES.md"
     "docs\BUILD_AND_VALIDATION.md"
