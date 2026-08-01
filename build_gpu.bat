@@ -10,6 +10,8 @@ set "WORK=%BUILDROOT%\work"
 set "RELEASEDIR=release\GeoComb_Windows_GPU"
 set "RELEASEZIP=release\GeoComb_Windows_GPU.zip"
 set "LOG=%BUILDROOT%\build_gpu.log"
+set "LICENSESRC=licenses\windows_cuda"
+set "SOURCE_URL=https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0"
 
 echo ============================================================
 echo GeoComb Windows NVIDIA GPU platform build
@@ -35,12 +37,30 @@ for %%F in (
     "models\stage2_best.pt"
     "models\stage3_best.pt"
     "pipeline_scripts\alternating_regularize_localhex_from_gray_step1_v1.py"
+    "LICENSE"
+    "MODEL_CARD.md"
+    "ASSET_MANIFEST.json"
+    "README.md"
+    "README_KOREAN.md"
+    "docs\USER_GUIDE.md"
+    "docs\THIRD_PARTY_NOTICES.md"
+    "docs\BUILD_AND_VALIDATION.md"
+    "docs\KNOWN_LIMITATIONS.md"
+    "%LICENSESRC%\requirements_frozen.txt"
+    "%LICENSESRC%\third_party_packages.csv"
 ) do (
     if not exist "%%~F" (
-        echo ERROR: Required build asset is missing:
+        echo ERROR: Required build or release asset is missing:
         echo   %%~F
         exit /b 1
     )
+)
+
+dir /b /s "%LICENSESRC%\license_files\*" >nul 2>&1
+if errorlevel 1 (
+    echo ERROR: No collected license files were found under:
+    echo   %LICENSESRC%\license_files
+    exit /b 1
 )
 
 echo Validating GPU environment...
@@ -105,12 +125,40 @@ if %ROBOCOPY_CODE% GEQ 8 (
 )
 
 for %%F in (
+    "README.md"
+    "README_KOREAN.md"
     "docs\USER_GUIDE.md"
     "docs\THIRD_PARTY_NOTICES.md"
     "docs\BUILD_AND_VALIDATION.md"
     "docs\KNOWN_LIMITATIONS.md"
+    "LICENSE"
+    "MODEL_CARD.md"
+    "ASSET_MANIFEST.json"
 ) do (
-    if exist "%%~F" copy /y "%%~F" "%RELEASEDIR%\" >nul
+    copy /y "%%~F" "%RELEASEDIR%\" >nul
+    if errorlevel 1 (
+        echo ERROR: Failed to copy release asset:
+        echo   %%~F
+        exit /b 1
+    )
+)
+
+robocopy "%LICENSESRC%" "%RELEASEDIR%\%LICENSESRC%" /E /R:2 /W:2 >nul
+set "ROBOCOPY_CODE=%ERRORLEVEL%"
+
+if %ROBOCOPY_CODE% GEQ 8 (
+    echo ERROR: License inventory copy failed with code %ROBOCOPY_CODE%.
+    exit /b %ROBOCOPY_CODE%
+)
+
+(
+    echo GeoComb 1.0.0 corresponding source release:
+    echo %SOURCE_URL%
+) > "%RELEASEDIR%\SOURCE_RELEASE.txt"
+
+if not exist "%RELEASEDIR%\SOURCE_RELEASE.txt" (
+    echo ERROR: SOURCE_RELEASE.txt was not created.
+    exit /b 1
 )
 
 echo.

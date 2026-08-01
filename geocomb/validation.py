@@ -556,7 +556,7 @@ def validate_installation(
             "",
             (
                 "Functional cross-platform validation "
-                f"(0.20 x pitch = {functional_threshold:.3f} px):"
+                f"(0.50 x pitch = {functional_threshold:.3f} px):"
             ),
             (
                 f"  reference match fraction="
