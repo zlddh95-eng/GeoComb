@@ -19,7 +19,7 @@ included.
 ## Data and model package
 
 The supporting data and four frozen model weights are archived as the
-GeoComb public data and model package v2.0.0:
+GeoComb public data and model package v1.0.0:
 
 https://doi.org/10.5281/zenodo.21751993
 
