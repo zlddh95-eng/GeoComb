@@ -2,35 +2,60 @@
 
 ## Source code
 
-The complete corresponding source for the public GeoComb release is hosted
-at:
+GeoComb v1.0.0 source and release files are hosted at:
 
 https://github.com/zlddh95-eng/GeoComb
 
-The source release associated with the manuscript should also be archived
-in a DOI-issuing repository. The DOI will be added after the first public
-archival release.
+The source code and Ultralytics-derived model artifacts are available through
+the project's `AGPL-3.0-only` open-source route. The GitHub software release
+is distinct from the Zenodo data and model package described below.
 
-The public source must include both the Windows application/inference source
-and the final training, dataset-construction, evaluation, and platform-
-validation scripts used to produce the released models and reported results.
-Historical exploratory scripts that did not contribute to the released
-workflow need not be included.
+The public source includes both the Windows application/inference source and
+the final training, dataset-construction, evaluation, and platform-validation
+scripts used to produce the released models and reported results. Historical
+exploratory scripts that did not contribute to the released workflow are not
+included.
+
+## Data and model package
+
+The supporting data and four frozen model weights are archived as the
+GeoComb public data and model package v2.0.0:
+
+https://doi.org/10.5281/zenodo.21751993
+
+The archive contains:
+
+- 53 in-house full-frame images with annotations, split into 39 training,
+  8 validation, and 6 test images;
+- 1,065 corrected ROI annotation records;
+- evaluation results for the deduplicated 159-image ROI test set;
+- a portable manifest for 1,241,053 classifier crops;
+- the four final frozen model weights;
+- provenance and duplicate-audit records; and
+- SHA-256 checksums.
+
+One exact train-test ROI duplicate was excluded from the corrected test
+evaluation. ROI source images without individually confirmed redistribution
+provenance are represented by filenames, annotations, hashes, and inventory
+records rather than redistributed image content.
+
+The Zenodo DOI identifies this versioned data and model package. It is not a
+software DOI for the GitHub source release.
 
 ## Model weights
 
-The four frozen GeoComb model weights are distributed as assets of the
-corresponding versioned GitHub release or DOI archive. Each model release
-must identify the exact source tag and include the checksums recorded in
-`ASSET_MANIFEST.json`.
+The four frozen GeoComb model weights are included in the Zenodo package
+above. Their checksums and release identities are recorded in
+`ASSET_MANIFEST.json` and in the archive's checksum files.
 
 The weights are Ultralytics-derived model artifacts distributed through the
 project's `AGPL-3.0-only` open-source route. They are not assigned a separate
 non-commercial license. See `MODEL_CARD.md` for training provenance,
 intended use, limitations, attribution, and third-party-rights boundaries.
 
-A release of model weights does not include or relicense the source images,
-image crops, or annotation files used for training.
+The release of model weights does not include or relicense source images,
+image crops, or annotation files that are not explicitly included in the
+archive.
 
 ## DeepBee
 
@@ -57,7 +82,7 @@ Mendeley Data as CC BY-NC 3.0:
 https://doi.org/10.17632/db35fj73x5.1
 
 GeoComb's citation of this dataset does not imply that the segmentation
-dataset was repackaged in the model release.
+dataset was repackaged in the data and model archive.
 
 ## FAIRHiveFrames-1K
 
@@ -68,24 +93,15 @@ external benchmark subsets.
 
 ## In-house images
 
-Only the portion of the in-house collection approved for public
-redistribution will be deposited. Restricted images, if any, must be
-described in the manuscript's data-availability statement together with
-the reason for restriction and an appropriate contact or access procedure.
+The archive contains the 53 in-house full-frame images approved for public
+redistribution and their corresponding annotations: 39 training, 8
+validation, and 6 test images.
 
 ## Benchmark annotations and derived outputs
 
-The public research-data archive should contain:
-
-- benchmark image manifests;
-- corrected cell-center and class annotations that may be redistributed;
-- stage-wise detection outputs;
-- per-image evaluation tables;
-- bootstrap summaries;
-- platform comparison outputs;
-- content-hash overlap audit tables; and
-- a data dictionary and checksums.
-
-DeepBee-derived cell crops and corrected cell-level annotations are excluded.
-Raw third-party image content must not be added to the archive unless its
-license explicitly permits redistribution.
+The public archive provides redistributable benchmark annotations and
+derived outputs, portable manifests, inventory and provenance records,
+duplicate and content-overlap audits, evaluation summaries, and checksums.
+Raw DeepBee and FAIRHiveFrames-1K images, DeepBee-derived crops, and corrected
+DeepBee cell-level annotations are excluded. Third-party image content is not
+relicensed by GeoComb and must be obtained from its original source.
