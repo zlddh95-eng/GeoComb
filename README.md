@@ -87,7 +87,7 @@ repository.
 ## Data and model availability
 
 The supporting data and four frozen model weights are archived in the
-[GeoComb public data and model package v2.0.0](https://doi.org/10.5281/zenodo.21751993).
+[GeoComb public data and model package v1.0.0](https://doi.org/10.5281/zenodo.21751993).
 The archive contains 53 in-house full-frame images with annotations
 (39 training, 8 validation, and 6 test), 1,065 corrected ROI annotation
 records, results for the deduplicated 159-image ROI test set, a portable
@@ -108,7 +108,7 @@ cell-level annotations. See
 
 If you use GeoComb, cite the associated article, the GeoComb v1.0.0 source
 release, and the
-[GeoComb v2.0.0 data and model archive](https://doi.org/10.5281/zenodo.21751993),
+[GeoComb v1.0.0 data and model archive](https://doi.org/10.5281/zenodo.21751993),
 as applicable. Citation metadata are provided in
 [CITATION.cff](CITATION.cff). The Zenodo DOI identifies the data and model
 package, not a software archive. The article DOI will be added after
