@@ -43,8 +43,11 @@ cell counts and center coordinates. CPU-CUDA class-label agreement was
 
 ## Windows packages
 
-Download the complete CPU or GPU archive from the repository's Releases
-page. Do not move the executable away from its accompanying folder.
+Prebuilt Windows CPU and NVIDIA CUDA executable packages, frozen model
+weights, supporting data, provenance records, and checksums are available
+from Zenodo:
+
+https://doi.org/10.5281/zenodo.21751993
 
 ```text
 GeoComb_Windows_CPU/GeoComb_CPU/GeoComb_CPU.exe
