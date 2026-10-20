@@ -13,6 +13,44 @@ environment used PyTorch 2.13.0+cpu, and the CUDA environment used PyTorch
 Exact dependency snapshots from the release environments accompany the
 tagged source release in the `licenses` directory.
 
+## Source checkout and shared PyInstaller configuration
+
+Use a revision containing the tracked `build/GeoComb.spec`. The original
+`v1.0.0` tag omitted this file; use this repair commit or apply the repair
+to a checkout of that tag. Installing Python packages does not generate it.
+The tag and previously published binaries are not changed by this repair.
+
+Retrieve the actual model files before building (a source ZIP may contain
+only Git LFS pointer files):
+
+```bat
+git lfs install
+git lfs pull
+```
+
+Alternatively, obtain the unchanged weights from the archive documented in
+`DATA_AND_MODEL_AVAILABILITY.md` and place them in `models/`. Verify their
+hashes against `ASSET_MANIFEST.json`. The spec rejects missing files, empty
+weights, and unhydrated LFS pointers before dependency analysis; this check
+does not replace SHA-256 verification.
+
+Both batch files use the same spec, with the following build-time selection:
+
+| Batch file | Python environment | GEOCOMB_VARIANT | Entry point | Output folder/executable |
+| --- | --- | --- | --- | --- |
+| `build_cpu.bat` | `.venv_cpu` | `CPU` | `geocomb_entry.py` | `GeoComb_CPU/GeoComb_CPU.exe` |
+| `build_gpu.bat` | `.venv_gpu` | `GPU` | `geocomb_gpu_entry.py` | `GeoComb_GPU/GeoComb_GPU.exe` |
+
+Each output is under `build_output/<cpu-or-gpu>/dist/`. The spec resolves
+inputs relative to its own location and includes the four frozen weights,
+seven `runpy` pipeline scripts, and `config/defaults.json` under `_internal/`,
+matching `geocomb.resources`. The scripts are also analyzed as hidden imports.
+Ultralytics package data, source files, metadata, and submodules are collected;
+standard PyInstaller hooks collect the installed Torch/Torchvision and Qt
+dependencies. CPU/CUDA libraries come from the selected virtual environment.
+The executable keeps its console for CLI output and pipeline logging.
+Local `regression_test` assets are never automatically bundled.
+
 ## Environment validation and building
 
 CPU:
@@ -33,6 +71,36 @@ build_gpu.bat
 
 These commands validate the Python environment and build the application.
 They do not reproduce the manuscript benchmark.
+
+## Verification of the packaging repair
+
+Static contract checks require Python and Git, without ML or GUI packages:
+
+```bat
+python -m unittest discover -s tests -v
+```
+
+These checks cover both variant mappings, runtime resource destinations,
+dynamic-script analysis, paths containing spaces, missing/LFS-pointer assets,
+and the `.gitignore` exception. They mock PyInstaller targets and package
+collection. Passing them does **not** demonstrate a successful Windows build,
+DLL collection, model loading, GUI startup, or CPU/CUDA inference.
+
+Before distributing newly built executables, complete the following on Windows:
+
+- Run both environment installers/checks and `build_cpu.bat` / `build_gpu.bat`.
+- Extract each complete ZIP to a location separate from the source checkout.
+  Launch its executable and check Qt startup, image display, and GPU detection.
+- Run `GeoComb_CPU.exe analyze --help` and `GeoComb_GPU.exe analyze --help`.
+  Analyze authorized images with `analyze --input-folder INPUT --project-folder
+  OUTPUT --device cpu` or `--device cuda`, using distinct new output folders.
+  Confirm that all four models load and all seven pipeline stages execute.
+- Open the resulting project, edit cells, and regenerate Excel/CSV/overlays
+  in the GUI and with `export --project-folder OUTPUT`.
+- Run the optional source regression check with authorized local assets.
+  To test frozen `validate`, temporarily place those assets under the extracted
+  executable's `_internal/regression_test/`, run `validate --device cpu` or
+  `validate --device cuda`, and remove them before redistribution.
 
 ## Optional maintainer regression check
 
