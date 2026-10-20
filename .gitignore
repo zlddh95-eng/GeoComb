@@ -30,7 +30,8 @@ secrets*
 Thumbs.db
 
 # PyInstaller and release products
-build/
+build/*
+!build/GeoComb.spec
 build_output/
 dist/
 release/
