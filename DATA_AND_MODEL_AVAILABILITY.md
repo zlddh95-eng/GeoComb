@@ -2,13 +2,16 @@
 
 ## Source code
 
-GeoComb v1.0.0 source and release files are hosted at:
+GeoComb v1.0.0 source and release files are publicly accessible without a
+GitHub account:
 
-https://github.com/zlddh95-eng/GeoComb
+- Source: [v1.0.0 tag](https://github.com/zlddh95-eng/GeoComb/tree/v1.0.0).
+- Windows packages: [GitHub Release v1.0.0](https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0).
 
-The source code and Ultralytics-derived model artifacts are available through
-the project's `AGPL-3.0-only` open-source route. The GitHub software release
-is distinct from the Zenodo data and model package described below.
+The source code and Ultralytics-derived model artifacts use the project's
+`AGPL-3.0-only` license. The GitHub software release is distinct from the
+Zenodo data and model package described below. The Zenodo DOI is not a DOI
+for the GitHub source release.
 
 The public source includes both the Windows application/inference source and
 the final training, dataset-construction, evaluation, and platform-validation

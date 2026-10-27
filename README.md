@@ -5,6 +5,12 @@ honey bee comb cells from full-frame images. It combines learned comb-region
 segmentation and hierarchical cell-content classification with
 lattice-aware geometric center detection.
 
+**GitHub access:** The [v1.0.0 source tag](https://github.com/zlddh95-eng/GeoComb/tree/v1.0.0)
+and [GitHub release assets](https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0)
+are publicly accessible without a GitHub account. The separate
+[Zenodo data and model archive](https://doi.org/10.5281/zenodo.21751993)
+is not an archive of the GitHub source release.
+
 ## Main capabilities
 
 - segments the visible comb region inside the wooden frame;
@@ -29,7 +35,7 @@ The native eight classes are:
 
 ## Platform release
 
-The public platform release uses the frozen source, model weights,
+The GeoComb v1.0.0 platform release uses the frozen source, model weights,
 ROI procedure, and radius-selection rule evaluated in the associated
 manuscript. OpenCV processing is restricted to one thread and OpenCL is
 disabled to reduce backend-dependent numerical variation. ROI inference is
