@@ -2,13 +2,16 @@
 
 ## Source code
 
-GeoComb v1.0.0 source and release files are hosted at:
+GeoComb v1.0.0 source and release files are publicly accessible without a
+GitHub account:
 
-https://github.com/zlddh95-eng/GeoComb
+- Source: [v1.0.0 tag](https://github.com/zlddh95-eng/GeoComb/tree/v1.0.0).
+- Windows packages: [GitHub Release v1.0.0](https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0).
 
-The source code and Ultralytics-derived model artifacts are available through
-the project's `AGPL-3.0-only` open-source route. The GitHub software release
-is distinct from the Zenodo data and model package described below.
+The source code and Ultralytics-derived model artifacts use the project's
+`AGPL-3.0-only` license. The GitHub software release is distinct from the
+Zenodo data and model package described below. The Zenodo DOI is not a DOI
+for the GitHub source release.
 
 The public source includes both the Windows application/inference source and
 the final training, dataset-construction, evaluation, and platform-validation
@@ -18,19 +21,35 @@ included.
 
 ## Data and model package
 
-The supporting data and four frozen model weights are archived as the
-GeoComb public data and model package v1.0.0:
+The supporting data and four frozen deployment model weights are publicly
+available in *GeoComb: supporting data, model weights, and Windows
+applications*, data package v1.0.1:
 
-https://doi.org/10.5281/zenodo.21751993
+https://doi.org/10.5281/zenodo.22883902
+
+- [Download the data and model ZIP](https://zenodo.org/records/22883902/files/GeoComb_public_data_and_models_1.0.1.zip).
+- [Download its SHA-256 checksum](https://zenodo.org/records/22883902/files/GeoComb_public_data_and_models_1.0.1.zip.sha256).
+
+Data package v1.0.1 accompanies GeoComb software v1.0.0; these are separate
+version numbers. Cite the version-specific DOI above and use the citation
+metadata on that Zenodo record.
+
+The previously documented DOI, `10.5281/zenodo.21751993`, points to a deleted
+record (HTTP 410), not a working download. The old and current records have
+different concept DOIs (`10.5281/zenodo.21751992` and
+`10.5281/zenodo.22883901`, respectively); they are separate Zenodo version
+families, not interchangeable versions of one record.
 
 The archive contains:
 
-- 53 in-house full-frame images with annotations, split into 39 training,
-  8 validation, and 6 test images;
+- 52 in-house full-frame images with annotations, split into 39 training,
+  7 validation, and 6 test images;
 - 1,065 corrected ROI annotation records;
 - evaluation results for the deduplicated 159-image ROI test set;
-- a portable manifest for 1,241,053 classifier crops;
-- the four final frozen model weights;
+- a portable manifest for 1,241,053 classifier crop files;
+- the four frozen deployment model weights and a single eight-class baseline;
+- supporting analyses, saved predictions, scripts, and figure source data
+  for the 29-image benchmark (13 DeepBee, 10 FAIRHive, and 6 in-house images);
 - provenance and duplicate-audit records; and
 - SHA-256 checksums.
 
@@ -44,9 +63,20 @@ software DOI for the GitHub source release.
 
 ## Model weights
 
-The four frozen GeoComb model weights are included in the Zenodo package
-above. Their checksums and release identities are recorded in
-`ASSET_MANIFEST.json` and in the archive's checksum files.
+The four frozen GeoComb deployment model weights are included in the Zenodo
+package above. Their SHA-256 hashes match `ASSET_MANIFEST.json`. For source
+use, copy the following files from the archive's `weights/` directory into
+`models/`, using the runtime filenames shown below, and verify their hashes:
+
+| Archive filename | Runtime filename in `models/` |
+| --- | --- |
+| `frame_roi_yolo26m_1024_best.pt` | `frame_roi_yolo26m_1024_best.pt` |
+| `stage1_egg3_larvae2_rebalanced_lowres_best.pt` | `stage1_best.pt` |
+| `stage2_capped_binary_current_best.pt` | `stage2_best.pt` |
+| `stage3_egg_empty_balanced_lowres_best.pt` | `stage3_best.pt` |
+
+The additional `single_8class_stage1_context_best.pt` is a comparison
+baseline, not a replacement for any of the four deployment models.
 
 The weights are Ultralytics-derived model artifacts distributed through the
 project's `AGPL-3.0-only` open-source route. They are not assigned a separate
@@ -93,9 +123,11 @@ external benchmark subsets.
 
 ## In-house images
 
-The archive contains the 53 in-house full-frame images approved for public
-redistribution and their corresponding annotations: 39 training, 8
-validation, and 6 test images.
+The archive contains 52 in-house full-frame images and their corresponding
+annotations: 39 training, 7 validation, and 6 test images. The v1.0.1 package
+corrects the earlier inventory: image 12 was excluded from classifier
+validation, as documented in `inhouse_full_frames/README.txt` and
+`provenance/`. The original 53-image inventory is retained as provenance.
 
 ## Benchmark annotations and derived outputs
 

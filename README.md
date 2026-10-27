@@ -5,6 +5,12 @@ honey bee comb cells from full-frame images. It combines learned comb-region
 segmentation and hierarchical cell-content classification with
 lattice-aware geometric center detection.
 
+**GitHub access:** The [v1.0.0 source tag](https://github.com/zlddh95-eng/GeoComb/tree/v1.0.0)
+and [GitHub release assets](https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0)
+are publicly accessible without a GitHub account. The separate
+[Zenodo data and model package v1.0.1](https://doi.org/10.5281/zenodo.22883902)
+is not an archive of the GitHub source release.
+
 ## Main capabilities
 
 - segments the visible comb region inside the wooden frame;
@@ -29,7 +35,7 @@ The native eight classes are:
 
 ## Platform release
 
-The public platform release uses the frozen source, model weights,
+The GeoComb v1.0.0 platform release uses the frozen source, model weights,
 ROI procedure, and radius-selection rule evaluated in the associated
 manuscript. OpenCV processing is restricted to one thread and OpenCL is
 disabled to reduce backend-dependent numerical variation. ROI inference is
@@ -43,11 +49,10 @@ cell counts and center coordinates. CPU-CUDA class-label agreement was
 
 ## Windows packages
 
-Prebuilt Windows CPU and NVIDIA CUDA executable packages, frozen model
-weights, supporting data, provenance records, and checksums are available
-from Zenodo:
-
-https://doi.org/10.5281/zenodo.21751993
+Prebuilt Windows CPU and NVIDIA CUDA executable packages are available from
+[GitHub Release v1.0.0](https://github.com/zlddh95-eng/GeoComb/releases/tag/v1.0.0).
+For supporting data, model weights, and checksums, see
+[Data and model availability](#data-and-model-availability) below.
 
 ```text
 GeoComb_Windows_CPU/GeoComb_CPU/GeoComb_CPU.exe
@@ -89,13 +94,15 @@ repository.
 
 ## Data and model availability
 
-The supporting data and four frozen model weights are archived in the
-[GeoComb public data and model package v1.0.0](https://doi.org/10.5281/zenodo.21751993).
-The archive contains 53 in-house full-frame images with annotations
-(39 training, 8 validation, and 6 test), 1,065 corrected ROI annotation
+The supporting data and four frozen deployment model weights are archived in
+[GeoComb data and model package v1.0.1](https://doi.org/10.5281/zenodo.22883902).
+This data package accompanies GeoComb software v1.0.0.
+The archive contains 52 in-house full-frame images with annotations
+(39 training, 7 validation, and 6 test), 1,065 corrected ROI annotation
 records, results for the deduplicated 159-image ROI test set, a portable
-manifest for 1,241,053 classifier crops, model provenance, and SHA-256
-checksums.
+manifest for 1,241,053 classifier crop files, model provenance, and SHA-256
+checksums. It also includes the single eight-class baseline model and
+supporting analyses for the 29-image benchmark.
 
 Verify the weights against [ASSET_MANIFEST.json](ASSET_MANIFEST.json) and
 review their provenance, intended use, limitations, and licensing in
@@ -111,11 +118,12 @@ cell-level annotations. See
 
 If you use GeoComb, cite the associated article, the GeoComb v1.0.0 source
 release, and the
-[GeoComb v1.0.0 data and model archive](https://doi.org/10.5281/zenodo.21751993),
-as applicable. Citation metadata are provided in
-[CITATION.cff](CITATION.cff). The Zenodo DOI identifies the data and model
-package, not a software archive. The article DOI will be added after
-assignment.
+[GeoComb data and model package v1.0.1](https://doi.org/10.5281/zenodo.22883902),
+as applicable. Software and article citation metadata are provided in
+[CITATION.cff](CITATION.cff); use the Zenodo record's citation metadata and
+version-specific DOI above for data package v1.0.1. The Zenodo DOI identifies
+the data and model package, not the GitHub source release. The article DOI
+will be added after assignment.
 
 ## License
 
